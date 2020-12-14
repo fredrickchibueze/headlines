@@ -3,7 +3,11 @@
         <title>Headlines</title>
     </head>
     <body>
-        <h1>Headlines</h1>
+        <h1>{{publication_name}} Headlines</h1>
+        <form>
+            <input type='text' name='publication' placeholder='search'/>
+            <input type="submit" value="submit" />
+        </form>
         {% for article in articles %}
         <a href='{{article.link}}'><b>{{article.title}}</b></a><br/>
         <i>{{article.published}}</i><br/>
